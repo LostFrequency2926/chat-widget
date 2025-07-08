@@ -17,7 +17,13 @@
   border-radius: 50%;
   width: 64px;
   height: 64px;
-  position: relative;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
 }
 
 /* Notification badge */
@@ -55,6 +61,13 @@
 .chat-window-wrapper .chat-window {
   border-radius: 1rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 400px !important;
+  height: 600px !important;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* === Message Bubbles === */
