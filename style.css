@@ -10,24 +10,29 @@
 }
 
 /* === Chat Toggle Button === */
-.chat-window-wrapper .chat-window-toggle {
+.chat-window-toggle {
   background: linear-gradient(135deg, var(--tidio-gradient-start), var(--tidio-gradient-end));
   color: var(--tidio-text-light);
   box-shadow: 0 4px 12px rgba(58, 142, 246, 0.4);
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  display: flex;
+  width: 64px !important;
+  height: 64px !important;
+  position: fixed !important;
+  bottom: 1.5rem !important;
+  right: 1.5rem !important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  z-index: 10000;
+  z-index: 10000 !important;
+}
+
+/* Prevent wrapper from interfering */
+.chat-window-wrapper {
+  position: static !important;
 }
 
 /* Notification badge */
-.chat-window-wrapper .chat-window-toggle::after {
+.chat-window-toggle::after {
   content: "1";
   position: absolute;
   top: -6px;
@@ -58,7 +63,7 @@
 }
 
 /* === Chat Window Styling === */
-.chat-window-wrapper .chat-window {
+.chat-window {
   border-radius: 1rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   width: 400px !important;
