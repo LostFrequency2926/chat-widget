@@ -73,6 +73,18 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* === Message Bubbles === */
@@ -83,10 +95,32 @@
 }
 
 .chat-message.chat-message-from-bot {
-  background: #f1f4f9;
+  background: #ffffff;
   color: #333;
-  border-radius: 1rem 1rem 1rem 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.chat-message + .chat-message {
+  margin-top: 0.75rem;
+}
+
+/* === Quick Reply Buttons === */
+.chat-button {
+  background: transparent;
   border: 1px solid #e0e6ef;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  color: #3a8ef6;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.chat-button:hover {
+  background: #f0f4ff;
+  border-color: #3a8ef6;
 }
 
 /* === Input Area === */
